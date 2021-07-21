@@ -1,0 +1,12 @@
+logins:
+- :tag: login_default
+  :email: lucas@gmail.com
+  :senha: C0nnect123
+
+produtos:
+- :tag: produto1
+  :codigo: 1005
+  :nome: PassaTempo
+  :unidade: 150g
+  :marca: Nestle
+  :categoria: Biscoito

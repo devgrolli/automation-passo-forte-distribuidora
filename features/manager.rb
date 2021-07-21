@@ -12,4 +12,9 @@ class Manager
     mensagem = $mensagem_manager.find { |mensagem| mensagem[:tag].index(/#{tag}/i) != nil }
     mensagem
   end
+
+  def self.get_produto(tag) 
+    produto = $produto_manager.find { |produto| produto[:tag].index(/#{tag}/i) != nil }
+    produto
+  end
 end

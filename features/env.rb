@@ -21,4 +21,5 @@ end
 Capybara.default_max_wait_time = 20
 
 $login_manager = DATA_MANAGER['logins']
-$mensagem_manager = DATA_MANAGER['mensagens']
+$produto_manager = DATA_MANAGER['produtos']
+# $mensagem_manager = DATA_MANAGER['mensagens']

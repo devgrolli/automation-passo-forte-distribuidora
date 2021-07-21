@@ -1,16 +1,21 @@
-Dado("que acesse a página de login") do
+Quando('acessar a página de login') do
+  @home = $page_estoque.home
+  @home.acessar_login
+end
+
+Quando('realizar o login {string}') do |login|
   @login = $page_estoque.login
-  @login.load
+  @login.realizar_login(login)
 end
 
-Dado("acessar a página de cadastro") do 
-  @login.acessar_page_cadastro
+Então('validar que o usuário foi logado na aplicação') do
+  expect($page_estoque.home).to have_label_aisde
+  expect(page).to have_content /Passo Forte/i
 end
 
-Quando("realizar login na aplicação {string}") do |login_default|
-  @login.realizar_login(login_default)
-end
-
-Então("o usuário deverá estar logado na aplicação") do
-  expect($page_estoque.funcionario).to have_div_table
+Dado('que esteja logado na aplicação com o usuário {string}') do |login|
+  steps "Dado que acesse a página inicial
+         Quando acessar a página de login
+         Quando realizar o login '#{login}'
+         Então validar que o usuário foi logado na aplicação"
 end
