@@ -6,7 +6,7 @@ logins:
 produtos:
 - :tag: produto1
   :codigo: 1005
-  :nome: PassaTempo
+  :nome: TesteProduto
   :unidade: 150g
   :marca: Nestle
   :categoria: Biscoito
